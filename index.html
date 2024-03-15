@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Login Form</title>
+    <style>
+        button {
+            margin-right: 30px;
+            background-color: yellow;
+            font-size: 18px;
+        }
+
+        body {
+            text-align: center;
+            background-color: lavender;
+        }
+
+        form {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Login Form</h1>
+    <hr><br>
+    <form id="loginForm" onsubmit="return validateForm()">
+        Username: <input type="text" id="username"><br><br>
+        Password: <input type="password" id="password"><br><br><br>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button><br><br><br>
+    </form>
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Simple validation for username and password
+            if (username === "rachana" && password === "12345") {
+                alert("Login successful!");
+                window.location.href = "welcome.html"; // Redirect to welcome page
+                return false; // Prevent form submission
+            } else {
+                alert("Invalid username or password. Please try again.");
+                return false; // Prevent form submission
+            }
+        }
+    </script>
+</body>
+
+
+
+
+</html>
